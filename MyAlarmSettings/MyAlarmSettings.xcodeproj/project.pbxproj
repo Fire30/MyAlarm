@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32C4DD6C15BCC07D00DF51A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C4DD6B15BCC07D00DF51A1 /* Foundation.framework */; };
+		32C4DD6E15BCC07D00DF51A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C4DD6D15BCC07D00DF51A1 /* UIKit.framework */; };
+		32C4DD7015BCC07D00DF51A1 /* Preferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C4DD6F15BCC07D00DF51A1 /* Preferences.framework */; };
+		32C4DD7B15BCC07E00DF51A1 /* MyAlarmSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4DD7A15BCC07E00DF51A1 /* MyAlarmSettingsController.m */; };
+		32C4DD9115BCC3F200DF51A1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C4DD9015BCC3F200DF51A1 /* MediaPlayer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32C4DD6815BCC07D00DF51A1 /* MyAlarmSettings.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAlarmSettings.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C4DD6B15BCC07D00DF51A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		32C4DD6D15BCC07D00DF51A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		32C4DD6F15BCC07D00DF51A1 /* Preferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Preferences.framework; path = Library/Frameworks/Preferences.framework; sourceTree = DEVELOPER_DIR; };
+		32C4DD7415BCC07D00DF51A1 /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		32C4DD7515BCC07D00DF51A1 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		32C4DD7715BCC07D00DF51A1 /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		32C4DD7815BCC07D00DF51A1 /* MyAlarmSettings-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyAlarmSettings-Info.plist"; sourceTree = "<group>"; };
+		32C4DD7915BCC07E00DF51A1 /* MyAlarmSettingsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAlarmSettingsController.h; sourceTree = "<group>"; };
+		32C4DD7A15BCC07E00DF51A1 /* MyAlarmSettingsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAlarmSettingsController.m; sourceTree = "<group>"; };
+		32C4DD7F15BCC07E00DF51A1 /* MyAlarmSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = MyAlarmSettings.plist; path = Package/Library/PreferenceLoader/Preferences/MyAlarmSettings.plist; sourceTree = "<group>"; };
+		32C4DD8215BCC07E00DF51A1 /* MyAlarmSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = MyAlarmSettings.plist; path = Package/Library/PreferenceBundles/MyAlarmSettings.bundle/MyAlarmSettings.plist; sourceTree = "<group>"; };
+		32C4DD8315BCC07E00DF51A1 /* MyAlarmSettingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MyAlarmSettingsIcon.png; path = Package/Library/PreferenceBundles/MyAlarmSettings.bundle/MyAlarmSettingsIcon.png; sourceTree = "<group>"; };
+		32C4DD8415BCC07E00DF51A1 /* MyAlarmSettingsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MyAlarmSettingsIcon@2x.png"; path = "Package/Library/PreferenceBundles/MyAlarmSettings.bundle/MyAlarmSettingsIcon@2x.png"; sourceTree = "<group>"; };
+		32C4DD8915BCC07E00DF51A1 /* com.fire30.MyAlarmSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = com.fire30.MyAlarmSettings.plist; path = Package/var/mobile/Library/Preferences/com.fire30.MyAlarmSettings.plist; sourceTree = "<group>"; };
+		32C4DD8A15BCC07E00DF51A1 /* MyAlarmSettings-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyAlarmSettings-Prefix.pch"; sourceTree = "<group>"; };
+		32C4DD9015BCC3F200DF51A1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32C4DD6415BCC07D00DF51A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32C4DD9115BCC3F200DF51A1 /* MediaPlayer.framework in Frameworks */,
+				32C4DD6C15BCC07D00DF51A1 /* Foundation.framework in Frameworks */,
+				32C4DD6E15BCC07D00DF51A1 /* UIKit.framework in Frameworks */,
+				32C4DD7015BCC07D00DF51A1 /* Preferences.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32C4DD5C15BCC07D00DF51A1 = {
+			isa = PBXGroup;
+			children = (
+				32C4DD7115BCC07D00DF51A1 /* MyAlarmSettings */,
+				32C4DD6A15BCC07D00DF51A1 /* Frameworks */,
+				32C4DD6915BCC07D00DF51A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		32C4DD6915BCC07D00DF51A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD6815BCC07D00DF51A1 /* MyAlarmSettings.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C4DD6A15BCC07D00DF51A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD9015BCC3F200DF51A1 /* MediaPlayer.framework */,
+				32C4DD6B15BCC07D00DF51A1 /* Foundation.framework */,
+				32C4DD6D15BCC07D00DF51A1 /* UIKit.framework */,
+				32C4DD6F15BCC07D00DF51A1 /* Preferences.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32C4DD7115BCC07D00DF51A1 /* MyAlarmSettings */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD7915BCC07E00DF51A1 /* MyAlarmSettingsController.h */,
+				32C4DD7A15BCC07E00DF51A1 /* MyAlarmSettingsController.m */,
+				32C4DD7215BCC07D00DF51A1 /* Package */,
+				32C4DD7615BCC07D00DF51A1 /* Supporting Files */,
+			);
+			path = MyAlarmSettings;
+			sourceTree = "<group>";
+		};
+		32C4DD7215BCC07D00DF51A1 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD7315BCC07D00DF51A1 /* DEBIAN */,
+				32C4DD7C15BCC07E00DF51A1 /* Library */,
+				32C4DD8515BCC07E00DF51A1 /* var */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		32C4DD7315BCC07D00DF51A1 /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD7415BCC07D00DF51A1 /* control.txt */,
+				32C4DD7515BCC07D00DF51A1 /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		32C4DD7615BCC07D00DF51A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD7715BCC07D00DF51A1 /* PackageVersion.plist */,
+				32C4DD7815BCC07D00DF51A1 /* MyAlarmSettings-Info.plist */,
+				32C4DD8A15BCC07E00DF51A1 /* MyAlarmSettings-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		32C4DD7C15BCC07E00DF51A1 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD7D15BCC07E00DF51A1 /* PreferenceLoader */,
+				32C4DD8015BCC07E00DF51A1 /* PreferenceBundles */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		32C4DD7D15BCC07E00DF51A1 /* PreferenceLoader */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD7E15BCC07E00DF51A1 /* Preferences */,
+			);
+			name = PreferenceLoader;
+			sourceTree = "<group>";
+		};
+		32C4DD7E15BCC07E00DF51A1 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD7F15BCC07E00DF51A1 /* MyAlarmSettings.plist */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		32C4DD8015BCC07E00DF51A1 /* PreferenceBundles */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD8115BCC07E00DF51A1 /* ___PACKAGENAME___.bundle */,
+			);
+			name = PreferenceBundles;
+			sourceTree = "<group>";
+		};
+		32C4DD8115BCC07E00DF51A1 /* ___PACKAGENAME___.bundle */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD8215BCC07E00DF51A1 /* MyAlarmSettings.plist */,
+				32C4DD8315BCC07E00DF51A1 /* MyAlarmSettingsIcon.png */,
+				32C4DD8415BCC07E00DF51A1 /* MyAlarmSettingsIcon@2x.png */,
+			);
+			name = "___PACKAGENAME___.bundle";
+			sourceTree = "<group>";
+		};
+		32C4DD8515BCC07E00DF51A1 /* var */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD8615BCC07E00DF51A1 /* mobile */,
+			);
+			name = var;
+			sourceTree = "<group>";
+		};
+		32C4DD8615BCC07E00DF51A1 /* mobile */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD8715BCC07E00DF51A1 /* Library */,
+			);
+			name = mobile;
+			sourceTree = "<group>";
+		};
+		32C4DD8715BCC07E00DF51A1 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD8815BCC07E00DF51A1 /* Preferences */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		32C4DD8815BCC07E00DF51A1 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				32C4DD8915BCC07E00DF51A1 /* com.fire30.MyAlarmSettings.plist */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		32C4DD6515BCC07D00DF51A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		32C4DD6715BCC07D00DF51A1 /* MyAlarmSettings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32C4DD8D15BCC07E00DF51A1 /* Build configuration list for PBXNativeTarget "MyAlarmSettings" */;
+			buildPhases = (
+				32C4DD6315BCC07D00DF51A1 /* Sources */,
+				32C4DD6415BCC07D00DF51A1 /* Frameworks */,
+				32C4DD6515BCC07D00DF51A1 /* Headers */,
+				32C4DD6615BCC07D00DF51A1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyAlarmSettings;
+			productName = MyAlarmSettings;
+			productReference = 32C4DD6815BCC07D00DF51A1 /* MyAlarmSettings.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32C4DD5E15BCC07D00DF51A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 32C4DD6115BCC07D00DF51A1 /* Build configuration list for PBXProject "MyAlarmSettings" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 32C4DD5C15BCC07D00DF51A1;
+			productRefGroup = 32C4DD6915BCC07D00DF51A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32C4DD6715BCC07D00DF51A1 /* MyAlarmSettings */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32C4DD6615BCC07D00DF51A1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32C4DD6315BCC07D00DF51A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32C4DD7B15BCC07E00DF51A1 /* MyAlarmSettingsController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		32C4DD8B15BCC07E00DF51A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		32C4DD8C15BCC07E00DF51A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		32C4DD8E15BCC07E00DF51A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyAlarmSettings/MyAlarmSettings-Prefix.pch";
+				INFOPLIST_FILE = "MyAlarmSettings/MyAlarmSettings-Info.plist";
+				INSTALL_PATH = /Library/PreferenceBundles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+				iOSOpenDevBuildPackageOnAnyBuild = YES;
+				iOSOpenDevCopyOnBuild = YES;
+				iOSOpenDevDevice = 192.168.1.51;
+				iOSOpenDevInstallOnAnyBuild = YES;
+				iOSOpenDevInstallOnProfiling = NO;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+		32C4DD8F15BCC07E00DF51A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyAlarmSettings/MyAlarmSettings-Prefix.pch";
+				INFOPLIST_FILE = "MyAlarmSettings/MyAlarmSettings-Info.plist";
+				INSTALL_PATH = /Library/PreferenceBundles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+				iOSOpenDevBuildPackageOnAnyBuild = YES;
+				iOSOpenDevCopyOnBuild = YES;
+				iOSOpenDevDevice = 192.168.1.51;
+				iOSOpenDevInstallOnAnyBuild = YES;
+				iOSOpenDevInstallOnProfiling = NO;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32C4DD6115BCC07D00DF51A1 /* Build configuration list for PBXProject "MyAlarmSettings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32C4DD8B15BCC07E00DF51A1 /* Release */,
+				32C4DD8C15BCC07E00DF51A1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32C4DD8D15BCC07E00DF51A1 /* Build configuration list for PBXNativeTarget "MyAlarmSettings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32C4DD8E15BCC07E00DF51A1 /* Release */,
+				32C4DD8F15BCC07E00DF51A1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 32C4DD5E15BCC07D00DF51A1 /* Project object */;
+}
