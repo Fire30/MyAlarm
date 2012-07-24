@@ -13,23 +13,28 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
+#include <stdlib.h>
+
 
 NSString *path = @"Library/PreferenceBundles/MyAlarmSettings.bundle/songs.plist";
 
 NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
 
-AVPlayer *player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:[dict objectForKey: @"songURL"]]];;
-
-
+AVPlayer *player;
 
 %hook Alarm
+
 - (id)sound
 {
-if([dict objectForKey: @"songURL"] == nil) return @"Song Not Set!";
-
-
-else return [dict objectForKey: @"songName"];
-
+    
+    NSString *n = [dict objectForKey: @"amountOfSongs"];
+                   
+    NSString *songNameFiller =  [[NSString alloc]initWithFormat:@"%@ Songs", n];
+                   
+    if([dict objectForKey: @"Song0URL"] == nil) return @"Song Not Set!";
+        
+    else return songNameFiller;
+            
 }
 
 %end
@@ -38,14 +43,18 @@ else return [dict objectForKey: @"songName"];
 
 - (id)defaultSound
 {
-
-
-if([dict objectForKey: @"songURL"] == nil) return @"Song Not Set!";
-
-
-else return [dict objectForKey: @"songName"];
-
+    
+    NSString *n = [dict objectForKey: @"amountOfSongs"];
+    
+    NSString *songNameFiller =  [[NSString alloc]initWithFormat:@"%@ Songs", n];
+    
+    if([dict objectForKey: @"Song0URL"] == nil) return @"Song Not Set!";
+    
+    else return songNameFiller;
+    
 }
+
+
 
 %end
 
@@ -55,7 +64,10 @@ else return [dict objectForKey: @"songName"];
 + (void)playAlertSound:(BOOL)sound soundName:(id)name inBundle:(id)bundle isRingtone:(BOOL)ringtone sandboxPath:(id)path
 {
 
-if([dict objectForKey: @"songURL"] == nil)
+int n = [[dict objectForKey: @"amountOfSongs"] intValue];
+NSString *urlKey =  [[NSString alloc]initWithFormat:@"Song%iURL", arc4random() % n];
+    
+if([dict objectForKey: @"Song0URL"] == nil)
 {
     NSString *hax =  [[NSString alloc]initWithFormat:@"You Have Not Chosen A Song! \n Please go to Settings>MyAlarm and choose a song."];
     
@@ -66,13 +78,13 @@ if([dict objectForKey: @"songURL"] == nil)
                   
 else
 
+    
 {
     
-if(player == nil)
-{
-    player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:[dict objectForKey: @"songURL"]]];
-}
 
+player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:[dict objectForKey:urlKey]]];
+
+    
 if(dict == nil)
 {
     dict = [NSDictionary dictionaryWithContentsOfFile:path];
